@@ -1,0 +1,23 @@
+{
+ "records":[
+
+  {
+   "name":"John Doe",
+   "nationality":"India",
+   "passport":"P9384721",
+   "dob":"1990-05-14",
+   "permit":"WP-882991",
+   "expiry":"2027-03-12"
+  },
+
+  {
+   "name":"Maria Lopez",
+   "nationality":"Spain",
+   "passport":"XK928211",
+   "dob":"1988-11-02",
+   "permit":"WP-771552",
+   "expiry":"2026-10-05"
+  }
+
+ ]
+}
