@@ -28,7 +28,7 @@ resultDiv.innerHTML=`
 <p><strong>Passport Number:</strong> ${record.passport}</p>
 <p><strong>Date of Birth:</strong> ${record.dob}</p>
 <p><strong>Permit Number:</strong> ${record.permit}</p>
-<p><strong>Expiry Date:</strong> ${record.expiry}</p>
+<p><strong>Company:</strong> ${record.company}</p>
 
 </div>
 `;
