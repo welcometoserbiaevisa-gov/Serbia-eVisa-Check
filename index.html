@@ -5,157 +5,52 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Work Permit & eVisa Status Portal</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<title>Login - Work Permit Portal</title>
 
 <style>
 
 body{
-font-family:'Inter',sans-serif;
+font-family:Arial;
 background:#f1f5f9;
-margin:0;
 display:flex;
-flex-direction:column;
-min-height:100vh;
-}
-
-.header{
-display:flex;
+justify-content:center;
 align-items:center;
-gap:30px;
-background:#23395d;
-color:white;
-padding:25px 45px;
+height:100vh;
+margin:0;
 }
 
-.logo{
-height:80px;
-}
-
-.title{
-font-size:24px;
-font-weight:600;
-}
-
-.content{
-flex:1;
-}
-
-.container{
-max-width:700px;
-margin:80px auto;
+.login-box{
 background:white;
 padding:40px;
 border-radius:10px;
+width:320px;
 box-shadow:0 10px 30px rgba(0,0,0,0.1);
 }
 
 h2{
-margin-bottom:25px;
-}
-
-label{
-display:block;
-margin-top:15px;
-margin-bottom:6px;
+margin-bottom:20px;
 }
 
 input{
 width:100%;
-padding:12px;
+padding:10px;
+margin:10px 0;
 border:1px solid #ccc;
-border-radius:6px;
-font-size:14px;
+border-radius:5px;
 }
 
 button{
-margin-top:25px;
+width:100%;
+padding:12px;
 background:#23395d;
 color:white;
-padding:12px 20px;
 border:none;
-border-radius:6px;
+border-radius:5px;
 cursor:pointer;
 }
 
 button:hover{
 background:#17263f;
-}
-
-.result-card{
-margin-top:30px;
-padding:20px;
-border-radius:8px;
-background:#f8fafc;
-border:1px solid #e5e7eb;
-}
-
-.valid{
-color:green;
-font-weight:600;
-}
-
-.invalid{
-color:red;
-font-weight:600;
-}
-
-.site-footer{
-padding:35px;
-background:white;
-display:flex;
-align-items:center;
-gap:20px;
-}
-
-.footer-logo{
-height:150px;
-}
-
-.footer-text h3{
-margin:0;
-color:#2c3e50;
-font-size:22px;
-}
-
-.footer-text p{
-margin:5px 0;
-}
-
-.small{
-font-size:12px;
-color:#666;
-}
-@media (max-width: 768px){
-
-.header{
-flex-direction:column;
-align-items:flex-start;
-padding:15px 20px;
-}
-
-.logo{
-height:40px;
-}
-
-.title{
-font-size:18px;
-}
-
-.container{
-margin:40px 15px;
-padding:25px;
-}
-
-.site-footer{
-flex-direction:column;
-align-items:flex-start;
-padding:40px;
-}
-
-.footer-logo{
-height:100px;
 }
 
 </style>
@@ -164,38 +59,34 @@ height:100px;
 
 <body>
 
-<header class="header">
-<img src="logo.png" class="logo">
-<div class="title">Work Permit & eVisa Verification Portal</div>
-</header>
+<div class="login-box">
 
-<main class="content">
+<h2>Portal Login</h2>
 
-<div class="container">
+<input type="text" id="username" placeholder="Username">
+<input type="password" id="password" placeholder="Password">
 
-<h2>Check Work-Permit & eVisa Status</h2>
-
-<label>Passport Number *</label>
-<input type="text" id="passport" placeholder="Enter passport number">
-
-<label>Date of Birth *</label>
-<input type="date" id="dob">
-
-<button onclick="checkPermit()">Check Status</button>
-
-<div id="result"></div>
+<button onclick="login()">Login</button>
 
 </div>
 
-</main>
+<script>
 
-<footer class="site-footer">
+function login(){
 
-<img src="footer-logo.png" class="footer-logo">
+var user=document.getElementById("username").value;
+var pass=document.getElementById("password").value;
 
-</footer>
+if(user==="admin" && pass==="1234"){
+window.location.href="portal.html";
+}
+else{
+alert("Invalid Login");
+}
 
-<script src="script.js"></script>
+}
+
+</script>
 
 </body>
 </html>
