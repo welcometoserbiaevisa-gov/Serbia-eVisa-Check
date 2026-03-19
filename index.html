@@ -5,18 +5,48 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Login - Work Permit Portal</title>
+<title>Login - Work Permit & eVisa Portal</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 
 body{
-font-family:Arial;
+font-family:'Inter',sans-serif;
 background:#f1f5f9;
+margin:0;
+display:flex;
+flex-direction:column;
+min-height:100vh;
+}
+
+/* HEADER */
+
+.header{
+display:flex;
+align-items:center;
+gap:20px;
+background:#23395d;
+color:white;
+padding:22px 40px;
+}
+
+.logo{
+height:50px;
+}
+
+.title{
+font-size:24px;
+font-weight:600;
+}
+
+/* MAIN CONTENT */
+
+.content{
+flex:1;
 display:flex;
 justify-content:center;
 align-items:center;
-height:100vh;
-margin:0;
 }
 
 .login-box{
@@ -27,16 +57,16 @@ width:320px;
 box-shadow:0 10px 30px rgba(0,0,0,0.1);
 }
 
-h2{
+.login-box h2{
 margin-bottom:20px;
 }
 
 input{
 width:100%;
-padding:10px;
+padding:12px;
 margin:10px 0;
 border:1px solid #ccc;
-border-radius:5px;
+border-radius:6px;
 }
 
 button{
@@ -45,7 +75,7 @@ padding:12px;
 background:#23395d;
 color:white;
 border:none;
-border-radius:5px;
+border-radius:6px;
 cursor:pointer;
 }
 
@@ -53,11 +83,72 @@ button:hover{
 background:#17263f;
 }
 
+/* FOOTER */
+
+.site-footer{
+padding:30px;
+background:white;
+display:flex;
+align-items:center;
+gap:20px;
+}
+
+.footer-logo{
+height:70px;
+}
+
+.footer-text h3{
+margin:0;
+color:#2c3e50;
+font-size:22px;
+}
+
+.footer-text p{
+margin:5px 0;
+}
+
+.small{
+font-size:12px;
+color:#666;
+}
+
+/* MOBILE */
+
+@media (max-width:768px){
+
+.header{
+flex-direction:column;
+align-items:flex-start;
+padding:15px 20px;
+}
+
+.title{
+font-size:18px;
+}
+
+.site-footer{
+flex-direction:column;
+align-items:flex-start;
+}
+
+}
+
 </style>
 
 </head>
 
 <body>
+
+<!-- HEADER -->
+
+<header class="header">
+<img src="logo.png" class="logo">
+<div class="title">Work Permit & eVisa Verification Portal</div>
+</header>
+
+<!-- LOGIN SECTION -->
+
+<main class="content">
 
 <div class="login-box">
 
@@ -70,6 +161,24 @@ background:#17263f;
 
 </div>
 
+</main>
+
+<!-- FOOTER -->
+
+<footer class="site-footer">
+
+<img src="footer-logo.png" class="footer-logo">
+
+<div class="footer-text">
+<h3>welcometoserbia.gov.rs</h3>
+<p>Welcome to Serbia</p>
+<p class="small">
+The website is licensed under a Creative Commons Attribution license.
+</p>
+</div>
+
+</footer>
+
 <script>
 
 function login(){
@@ -81,7 +190,7 @@ if(user==="admin" && pass==="1234"){
 window.location.href="portal.html";
 }
 else{
-alert("Invalid Login");
+alert("Invalid login credentials");
 }
 
 }
